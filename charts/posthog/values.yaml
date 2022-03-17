@@ -93,9 +93,9 @@ web:
     # -- The liveness probe failure threshold
     failureThreshold: 3
     # -- The liveness probe initial delay seconds
-    initialDelaySeconds: 50
+    initialDelaySeconds: 0
     # -- The liveness probe period seconds
-    periodSeconds: 10
+    periodSeconds: 5
     # -- The liveness probe success threshold
     successThreshold: 1
     # -- The liveness probe timeout seconds
@@ -105,9 +105,21 @@ web:
     # -- The readiness probe failure threshold
     failureThreshold: 3
     # -- The readiness probe initial delay seconds
-    initialDelaySeconds: 50
+    initialDelaySeconds: 0
     # -- The readiness probe period seconds
     periodSeconds: 30
+    # -- The readiness probe success threshold
+    successThreshold: 1
+    # -- The readiness probe timeout seconds
+    timeoutSeconds: 5
+
+  startupProbe:
+    # -- The readiness probe failure threshold
+    failureThreshold: 6
+    # -- The readiness probe initial delay seconds
+    initialDelaySeconds: 0
+    # -- The readiness probe period seconds
+    periodSeconds: 10
     # -- The readiness probe success threshold
     successThreshold: 1
     # -- The readiness probe timeout seconds
